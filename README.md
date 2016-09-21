@@ -16,8 +16,8 @@ Dependent softwares
 
 Input files preparation
 ==================
-BAM file: paired-end sequencing data aligned by BWA 
-FASTA file: The sequence of non-reference TEs
+1. BAM file: paired-end sequencing data aligned by BWA 
+2. FASTA file: The sequence of non-reference TEs
 
 
 Publication
@@ -26,8 +26,8 @@ We are preparing for a paper using this program.
 
 Version
 ==================
-01discordant_v2.pl: v2.0
-02cluster.pl: v1.0
+1  01discordant_v2.pl: v2.0
+2  02cluster.pl: v1.0
 
 Tips
 ==================
