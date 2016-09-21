@@ -9,7 +9,9 @@ Its peak usage of memory is 28GB with one thread using 30-70X whole genome seque
 
 Dependent softwares
 ==================
-Samtools v0.1.18 (version 1.1 or later may result in some mistakes in the step of discordant reads detection) BLAST CAP3 Perl Module: Bio::DB::Sam, Statistics::Descriptive, threads::shared, IO::File
+1. Samtools v0.1.18 (version 1.1 or later may result in some mistakes in the step of discordant reads detection) 
+2. Perl Module: Bio::DB::Sam, Statistics::Descriptive, threads::shared, IO::File 
+3. BLAST 
 
 
 Input files preparation
