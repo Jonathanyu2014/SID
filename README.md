@@ -26,8 +26,8 @@ We are preparing for a paper using this program.
 
 Version
 ==================
-1  01discordant_v2.pl: v2.0
-2  02cluster.pl: v1.0
+1.   01discordant_v2.pl: v2.0
+2.   02cluster.pl: v1.0
 
 Tips
 ==================
