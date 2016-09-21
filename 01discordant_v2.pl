@@ -30,7 +30,7 @@ Usage: perl $0 -bamlist <string> -refTEs <string> [-outDir <string>] [-nosort] [
        [-nosplit If the input bamfiles haven't  splited by RG library,please choose it.If you choose -nosplit,please ensure the file in bamlist is single.]
        [-name    If you input mulit files, you can appoint the name of result file.Default is unknown.]
 
-Note: $0 requires /ifs1/ST_SINGLECELL/USER/jiangrunze/tool/samtools-0.1.18/samtools,blast to be in the default path
+Note: $0 requires samtools (v0.1.18), blast to be in the default path
 About software:
 
 Name: Specific insertions detector(Sid)
