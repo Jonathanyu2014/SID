@@ -19,17 +19,19 @@ Input files preparation
 BAM file: paired-end sequencing data aligned by BWA 
 FASTA file: The sequence of non-reference TEs
 
-NOTEs
-==================
-1. The program allows putting 1 or more BAM files in a BAM_list file (plain text) as input. 
-2. You must make a BLAST index for the TE sequence and put it in the same directory with TE FASTA file.
-
 
 Publication
 ==================
 We are preparing for a paper using this program.
 
-Other tips
+Version
 ==================
-1. When running this program, the input BAM file should not remove duplicates beforehand, or it may stop running suddenly. 
-2. The parameter of '-run' cannot be used at present, and we will fix it soon.
+01discordant_v2.pl: v2.0
+02cluster.pl: v1.0
+
+Tips
+==================
+1. The program allows putting 1 or more BAM files in a BAM_list file (plain text) as input. 
+2. You must make a BLAST index for the TE sequence and put it in the same directory with TE FASTA file.
+3. When running this program, the input BAM file should not remove duplicates beforehand, or it may stop running accidentally.
+4. The parameter of '-run' cannot be used at present, and we will fix it soon.
