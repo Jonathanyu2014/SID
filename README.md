@@ -18,10 +18,10 @@ BAM file: paired-end sequencing data aligned by BWA
 FASTA file: The sequence of non-reference TEs
 
 NOTEs
------------------
+==================
 1. The program allows putting 1 or more BAM files in a BAM_list file (plain text) as input. 
-2. 2. You must make a BLAST index for the TE sequence and put it in the same directory with TE FASTA file.
------------------
+2. You must make a BLAST index for the TE sequence and put it in the same directory with TE FASTA file.
+
 
 Publication
 ==================
