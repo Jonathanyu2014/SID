@@ -4,19 +4,19 @@ Specific Insertions Detector (SID) is a Perl program to detect non-reference hum
 
 Memory requirement
 ==================
-Its peak usage of memory is 28GB with one thread using 30-70X whole genome sequencing data of human.
+In the first step, SID consumes less than 1GB memory. While its peak usage of memory could up to 30GB with one thread using 30-70X whole genome sequencing data of human in the second step.
 
 
 Dependent softwares
 ==================
-1. Samtools v0.1.18 (version 1.1 or later may result in some mistakes in the step of discordant reads detection) 
+1. Samtools v1.0 or later ( earlier versions may result in some mistakes in the step of discordant reads detection) 
 2. Perl Module: Bio::DB::Sam, Statistics::Descriptive, threads::shared, IO::File 
-3. BLAST 
+3. BLAST (v2.2.25 or later)
 
 
 Input files preparation
 ==================
-1. BAM file: paired-end sequencing data aligned by BWA 
+1. BAM file: paired-end sequencing data aligned by BWA aln
 2. FASTA file: The sequence of non-reference TEs
 
 
@@ -35,3 +35,8 @@ Tips
 2. You must make a BLAST index for the TE sequence and put it in the same directory with TE FASTA file.
 3. When running this program, the input BAM file should not remove duplicates beforehand, or it may stop running accidentally.
 4. The parameter of '-run' cannot be used at present, and we will fix it soon.
+5. Please export the path of BLAST and Samtools to .bashrc before running SID.
+
+
+
+
