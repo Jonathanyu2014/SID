@@ -47,3 +47,40 @@ perl 02cluster.pl -uniqueBam NA18537.lst.unique.srt.rmdup.bam  \
                   -info NA18537.lst.info \
                   -m8file NA18537.lst.repeat.m8 \
                   -outfile NA18537.TE.list
+
+The format of output file:
+There are 25 columns in the output file. Below is the detailed information.
+
+column explanation   example
+1	chromosome	chr1
+2	site of TSD at 5' end	8446628
+3	site of TSD at 3' end	8446635
+4	supporting clipped reads at 5' end	7
+5	supporting clipped reads at 3' end	12
+6	length of TSD sequence	8
+7	# of mismatches that spanning TSD	5
+8	polyA/T around TSD	2
+9	TSD sequence	GAACTCTT
+10	Total # of supporting reads at 5' end	L:19
+11	Total # of supporting reads at 3' end	R:23
+12	heterozygosity	HET:1
+13	score of confidence	62.50
+14	Block and TSD are at one end or two	BdTd
+15	site of Block at 5' end	8446212
+16	site of Block at 3' end	8447074
+17	supporting reads of Block at 5' end	13
+18	supporting reads of Block at 3' end	20
+19	type of TE	Alu
+20	type of TE (detailed)	Alu:Alu:Alu:Alu:Alu:Alu:Alu:Alu:Alu
+@L1:L1:L1
+21	Block info	1
+22	IDs of supporting reads of Block at 5' end	A81ED5ABXX:7:2201:1708:77141#0*
+23	IDs of supporting reads of Block at 3' end	B81ECYABXX:6:1105:19303:80682#0*
+24	IDs of supporting clipped reads at 5' end	FC81C71ABXX:6:1201:14760:54208
+#NNNNNNNN*
+25	IDs of supporting clipped reads at 3' end	FC81C71ABXX:8:1203:14052:72292
+#GNNNNCNN*
+
+For column 8,  '0' means no polyA/T at both ends of TSD. '1' means there is polyA/T at 5' end of TSD. '2' means there is polyA/T at 3' end of TSD. '3' means there are polyA/T sequences at both ends of TSD.
+Column 14 shows the Block/TSD exists at one end or both ends. 'B' refers to Block. 'd' refers to 'exist at both ends'. 'T' refers to TSD. 's' refers to 'exist at single end'.
+Column 21 shows the orientation of Block. '1' means Blocks are pairwised and have opposite directions. '2' means the Block is single and in positive direction. '3' means the Block is single and in negative direction. '5' means the Block is single and the orientation is unknown.
