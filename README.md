@@ -17,7 +17,7 @@ Dependent softwares
 Input files preparation
 ==================
 1. BAM file: paired-end sequencing data aligned by BWA aln
-2. FASTA file: The sequence of non-reference TEs
+2. FASTA file: The sequence of non-reference TEs and human reference genome. Both of them need BLAST indices. 
 
 
 Publication
@@ -32,10 +32,18 @@ Version
 Tips
 ==================
 1. The program allows putting 1 or more BAM files in a BAM_list file (plain text) as input. 
-2. You must make a BLAST index for the TE sequence and put it in the same directory with TE FASTA file.
+2. You must make a BLAST index for the TE sequence, and put it in the same directory with TE FASTA file.
 3. When running this program, the input BAM file should not remove duplicates beforehand, or it may stop running accidentally.
 4. The parameter of '-run' cannot be used at present, and we will fix it soon.
 5. Please export the path of BLAST and Samtools to .bashrc before running SID.
+
+Demo case
+==================
+An example of how to use SID and the demo input and output of SID.
+Because it is complicated to upload a folder or .zip file to Github, I uploaded the demo case to Google.
+Please contact me if any questions: yuqichao@genomics.cn or yqc20101111@hotmail.com
+
+https://drive.google.com/file/d/0B-5j9b_mSd_GVTdYczdlWXhOMVk/view?usp=sharing
 
 
 
