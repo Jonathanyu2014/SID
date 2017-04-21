@@ -39,8 +39,7 @@ Tips
 
 Demo case
 ==================
-An example of how to use SID and the demo input and output of SID.
-Because it is complicated to upload a folder or .zip file to Github, I uploaded the demo case to Google.
+An example of how to use SID and the demo input and output of SID. I uploaded the demo case to Google.
 Please contact me if any questions: yuqichao@genomics.cn or yqc20101111@hotmail.com
 
 https://drive.google.com/file/d/0B-5j9b_mSd_GaEI1eUxvamh2SWM/view?usp=sharing
