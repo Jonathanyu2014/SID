@@ -10,13 +10,14 @@ Usage: perl 01discordant_v2.pl -bamlist <string> -refTEs <string> [-outDir <stri
        -bamlist  A file include all bamfile names prepared to beed processed (one BAM per line)
        -refTEs   TE reference file (with its BLAST index in the same dir)
        [-outDir  Appoint the output directory]
-       [-nosort  Input bam file is nosorted.Default is sorted]
+       [-nosort  Input bam file is nosorted. Default is sorted]
        [-temp    Do not remove intermediate output files. Default is to cleanup]
        [-nosplit If the input bamfiles haven't been splited by RG library,please choose it.If you choose -nosplit,please ensure there is only one BAM in bamlist.]
        [-name    If you input mulit files, you can appoint the name of result file. Default is unknown.]
 
 Note: 
-1. 01discordant_v2.pl requires samtools(v0.1.18), BLAST to be in the default path. 
+1. 01discordant_v2.pl requires samtools(v1.0 or later), BLAST (v2.2.15 or later).
+2. Samtools and BLAST should be exported to .bashrc before running SID. 
 2. The BAM files in the bamlist should retain replicates or it may stop running accidentally.
 
 Example:
