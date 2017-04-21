@@ -1,10 +1,10 @@
 Introduction
 ==================
-Specific Insertions Detector (SID) is a Perl program to detect non-reference human transposon insertion. Through discordant reads detection and reads clustering, it could detect non-reference RIPs easily and quickly.
+Specific Insertions Detector (SID) is a program to detect non-reference human transposon insertion. It is compiled in Perl and includes two steps, discordant reads detection and reads clustering. Generally, the first step collects informative reads and generates other necessary files, while the second step discovers the specific insertion sites and exports the final results into a plain text.
 
 Memory requirement
 ==================
-In the first step, SID consumes less than 1GB memory. While its peak usage of memory could up to 30GB with one thread using 30-70X whole genome sequencing data of human in the second step.
+In the first step, SID usually consumes less than 1GB memory. While its peak usage of memory could up to 30GB with one thread using 30-70X whole genome sequencing data of human in the second step.
 
 
 Dependent softwares
@@ -43,8 +43,7 @@ An example of how to use SID and the demo input and output of SID.
 Because it is complicated to upload a folder or .zip file to Github, I uploaded the demo case to Google.
 Please contact me if any questions: yuqichao@genomics.cn or yqc20101111@hotmail.com
 
-https://drive.google.com/file/d/0B-5j9b_mSd_GVTdYczdlWXhOMVk/view?usp=sharing
-
+https://drive.google.com/file/d/0B-5j9b_mSd_GaEI1eUxvamh2SWM/view?usp=sharing
 
 
 
