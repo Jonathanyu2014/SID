@@ -40,11 +40,6 @@ Email: yuqichao\@genomics.cn zengyongli\@genomics.cn wangyeming\@genomics.cn
 
 USAGE
 
-# some notes for V3
-# Update the path of samtools (0.1.18) [1.0 or 1.1 has error 'Samtools-htslib-API: bam_get_library() not yet implemented']
-# Update the path of blast (origional path is invalid) and remake the blast index
-
-
 die $USAGE if($Help);
 ($bamlist && $refTEs) or die $USAGE;
 die "$bamlist is empty!\n" if(-z $bamlist);
@@ -400,7 +395,7 @@ if($nosplit){
     my $merge_file2="$outDir/merge2.sh";
     open OUT,">$merge_file" or die "Fail to open $merge_file\n";
     open OUT_2,">$merge_file2" or die "Fail to open $merge_file2\n";
-    print OUT "samtools  merge $outDir/$name.unique.bam";
+    print OUT "samtools merge -r $outDir/$name.unique.bam";
     print OUT_2 "cat ";
     foreach my $aa(@split_unique){
         print OUT "\t$aa";
@@ -415,7 +410,7 @@ if($nosplit){
     `echo "nosplit uses first cycly!"`; ## TEST
     `bash $merge_file`;
     `bash $merge_file2`;
-    `samtools  sort -m 2000000000 $outDir/$name.unique.bam $outDir/$name.unique.srt`;
+    `samtools sort -m 2000000000 $outDir/$name.unique.bam $outDir/$name.unique.srt`;
     `samtools rmdup $outDir/$name.unique.srt.bam $outDir/$name.unique.srt.rmdup.bam`;
     if(!($temp)){
         foreach my $aa(@split_unique){
@@ -724,7 +719,7 @@ if($nosplit){
     my $merge_file2="$outDir/merge2.sh";
     open OUT,">$merge_file" or die "Fail to open $merge_file\n";
     open OUT_2,">$merge_file2" or die "Fail to open $merge_file2\n";
-    print OUT "samtools merge $outDir/$Name.unique.bam";
+    print OUT "samtools merge -r $outDir/$Name.unique.bam";
     print OUT_2 "cat\t";
     foreach my $aa(@split_unique){
         print OUT "\t$aa";
