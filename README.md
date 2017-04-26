@@ -16,7 +16,7 @@ Dependent softwares
 
 Input files preparation
 ==================
-1. BAM file: paired-end sequencing data aligned by BWA aln
+1. BAM file: paired-end sequencing data aligned by BWA aln. At least containing XT/X1/MD tags.
 2. FASTA file: The sequence of non-reference TEs and human reference genome. Both of them need BLAST indices. 
 
 
@@ -37,9 +37,9 @@ Tips
 4. The parameter of '-run' cannot be used at present, and we will fix it soon.
 5. Please export the path of BLAST and Samtools to .bashrc before running SID.
 
-Demo case
+Demo
 ==================
-An example of how to use SID and the demo input and output of SID. I uploaded the demo case to Google.
+An example of how to use SID and the demo input and output of SID. I uploaded an example to Google drive.
 Please contact me if any questions: yuqichao@genomics.cn or yqc20101111@hotmail.com
 
 https://drive.google.com/file/d/0B-5j9b_mSd_GaEI1eUxvamh2SWM/view?usp=sharing
