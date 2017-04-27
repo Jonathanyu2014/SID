@@ -39,7 +39,7 @@ Tips
 
 Demo
 ==================
-An example of how to use SID and the demo input and output of SID. I uploaded an example to Google drive.
+I uploaded an example of how to use SID and the demo input and output of SID to Google drive.
 Please contact me if any questions: yuqichao@genomics.cn or yqc20101111@hotmail.com
 
 https://drive.google.com/file/d/0B-5j9b_mSd_GaEI1eUxvamh2SWM/view?usp=sharing
