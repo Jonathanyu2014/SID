@@ -36,6 +36,7 @@ Tips
 3. When running this program, the input BAM file should not remove duplicates beforehand, or it may stop running accidentally.
 4. The parameter of '-run' cannot be used at present, and we will fix it soon.
 5. Please export the path of BLAST and Samtools to .bashrc before running SID.
+6. Users need install above-mentioned dependent softwares and modules before running SID. There is no need to install SID.
 
 Demo
 ==================
