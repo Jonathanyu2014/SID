@@ -18,7 +18,7 @@ Usage: perl 01discordant_v2.pl -bamlist <string> -refTEs <string> [-outDir <stri
 Note: 
 1. 01discordant_v2.pl requires samtools(v1.0 or later), BLAST (v2.2.15 or later).
 2. Samtools and BLAST should be exported to .bashrc before running SID. 
-3. The BAM file as input should have XT/X1/MD tags. If the bamlise contain more than 1 file, the BAM should have RG tag.
+3. The BAM file as input should have XT/X1/MD tags. If the bamlist contain more than 1 file, the BAM should have RG tag.
 
 Example:
 perl 01discordant_v2.pl -bamlist BamList.txt -refTEs TE.fa -outDir /USER/TE/TEST -nosplit -name Human_TE
