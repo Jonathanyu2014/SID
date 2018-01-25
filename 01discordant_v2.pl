@@ -15,7 +15,6 @@ GetOptions(
     "refTEs=s"  => \$refTEs,    ##TE reference file
     "nosort!"   => \$nosort,    ##Input bam file is nosorted.Default is sorted.
     "temp!"     => \$temp,      ##Do not remove intermediate output files. Default is to cleanup.
-#   "run=s"     => \$run,       ##The ways to run blast,qsub or local.Default is local.
     "nosplit!"  => \$nosplit,   ##Split the bam file by RG library.Default is no.
     "name=s"    => \$Name,      ##If you input mulit files, you can appoint the name of result file.Default is unknown
 );
@@ -27,7 +26,7 @@ Usage: perl $0 -bamlist <string> -refTEs <string> [-outDir <string>] [-nosort] [
        [-outDir  Appoint the output directory]
        [-nosort  Input bam file is nosorted.Default is sorted]
        [-temp    Do not remove intermediate output files. Default is to cleanup]
-       [-nosplit If the input bamfiles haven't  splited by RG library,please choose it.If you choose -nosplit,please ensure the file in bamlist is single.]
+       [-nosplit If the input bamfiles are not splited by RG library,please choose it.If you choose -nosplit,please ensure the file in bamlist is single.]
        [-name    If you input mulit files, you can appoint the name of result file.Default is unknown.]
 
 Note: $0 requires samtools (v0.1.18), blast to be in the default path
@@ -356,7 +355,7 @@ if($nosplit){
         my $outfile_srtbam="$unique.srt.bam";
         my $outfile_srtrmdupbam="$unique.srt.rmdup.bam";
         `samtools view -bhS $outsam -o $outfile_bam`;
-        `samtools sort $outfile_bam $outfile_srt`;
+        `samtools sort $outfile_bam > $outfile_srtbam`;
         `samtools rmdup $outfile_srtbam $outfile_srtrmdupbam`;
         print STDERR "Blasting is over\n";
         if(!($temp)){
@@ -410,7 +409,7 @@ if($nosplit){
     `echo "nosplit uses first cycly!"`; ## TEST
     `bash $merge_file`;
     `bash $merge_file2`;
-    `samtools sort -m 2000000000 $outDir/$name.unique.bam $outDir/$name.unique.srt`;
+    `samtools sort -m 2000000000 $outDir/$name.unique.bam > $outDir/$name.unique.srt.bam`;
     `samtools rmdup $outDir/$name.unique.srt.bam $outDir/$name.unique.srt.rmdup.bam`;
     if(!($temp)){
         foreach my $aa(@split_unique){
@@ -672,7 +671,7 @@ if($nosplit){
         my $outfile_srtbam="$name1.unique.srt.bam";
         my $outfile_srtrmdupbam="$name1.unique.srt.rmdup.bam";
         `samtools view -bhS $outDir/$outsam -o $outDir/$outfile_bam`;
-        `samtools sort $outDir/$outfile_bam $outDir/$outfile_srt`;
+        `samtools sort $outDir/$outfile_bam > $outDir/$outfile_srtbam`;
         `samtools rmdup $outDir/$outfile_srtbam $outDir/$outfile_srtrmdupbam`;
         print STDERR "Blasting is over\n";
         if(!($temp)){
