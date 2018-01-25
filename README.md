@@ -45,5 +45,7 @@ Please contact me if any questions: yuqichao@genomics.cn or yqc20101111@hotmail.
 
 https://drive.google.com/file/d/0B-5j9b_mSd_GaEI1eUxvamh2SWM/view?usp=sharing
 
-
+Of note, "Test.sorted.bam" in "example.zip" is just an example to illustrate the format of input BAM files, it cannot be used directly.
+The real input BAM files are available at GigaDB ftp site ftp://penguin.genomics.cn/pub/10.5524/100001_101000/100318/Alignment/
+Please merge these split BAM files into one file and sort it before running SID.
 
